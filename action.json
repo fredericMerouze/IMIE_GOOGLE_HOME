@@ -19,7 +19,7 @@
   "conversations": {
     "imie--home": {
       "name": "imie--home",
-      "url": "http://127.0.0.1:4040 "
+      "url": "http://37c6b834.ngrok.io"
     }
   },
   "locale": "fr"
