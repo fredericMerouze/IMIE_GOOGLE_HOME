@@ -4,23 +4,23 @@
       "description": "Default Welcome Intent",
       "name": "MAIN",
       "fulfillment": {
-        "conversationName": "<INSERT YOUR CONVERSATION NAME HERE>"
+        "conversationName": "imie--home"
       },
       "intent": {
         "name": "actions.intent.MAIN",
         "trigger": {
           "queryPatterns": [
-            "talk to <INSERT YOUR NAME HERE>"
+            "Parler à mon application"
           ]
         }
       }
     }
   ],
   "conversations": {
-    "<INSERT YOUR CONVERSATION NAME HERE>": {
-      "name": "<INSERT YOUR CONVERSATION NAME HERE>",
-      "url": "<INSERT YOUR FULLFILLMENT URL HERE>"
+    "imie--home": {
+      "name": "imie--home",
+      "url": "http://127.0.0.1:4040 "
     }
   },
-  "locale": "en"
+  "locale": "fr"
 }
