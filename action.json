@@ -19,7 +19,8 @@
   "conversations": {
     "imie--home": {
       "name": "imie--home",
-      "url": "http://37c6b834.ngrok.io"
+      "url": "https://d7d467a6.ngrok.io",
+      "fulfillmentApiVersion": 2
     }
   },
   "locale": "fr"
