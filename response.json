@@ -1,0 +1,6 @@
+{
+        "welcome" : "Bienvenue ! j'ai choisis un nombre entre 1 à 100 ! à vous de le devinez !",
+        "negatif" : "c'est moins",
+        "positif" : "c'est plus",
+        "victoire" : "Bravo le nombre de départ est "
+}
