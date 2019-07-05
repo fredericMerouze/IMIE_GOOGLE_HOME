@@ -20,7 +20,12 @@
     "imie--home": {
       "name": "imie--home",
       "url": "https://26e02b1d.ngrok.io",
-      "fulfillmentApiVersion": 2
+      "fulfillmentApiVersion": 2,
+      "inDialogIntents": [
+        {
+          "name": "actions.intent.CANCEL"
+        }
+      ]     
     }
   },
   "locale": "fr"

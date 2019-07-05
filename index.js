@@ -17,6 +17,9 @@ const startChoices = [{
     jeu : 'jeu des lumières'        
 }] 
 
+app.intent('actions.intent.CANCEL', (conv) => {
+    return conv.close('Aurevoir ' + conv.data.firstName);
+});
 
 app.intent('actions.intent.PERMISSION', (conv, input, granted) => {
 
@@ -35,6 +38,8 @@ app.intent('actions.intent.PERMISSION', (conv, input, granted) => {
         conv.data.idGame = 1
     } else if(input === 'jeu des lumières' && conv.data.idGame === null){
         conv.data.idGame = 1  
+    } else {
+        conv.ask('je n\'ai pas compris')
     }
 
   })
