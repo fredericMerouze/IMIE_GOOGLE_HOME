@@ -24,9 +24,9 @@ app.intent('actions.intent.PERMISSION', (conv, input, granted) => {
     const explicit = conv.arguments.get('PERMISSION')
     conv.data.firstName = conv.user.name.given
     conv.data.lastName = conv.user.name.family
-    conv.ask('Bonjour ! Bienvenue sur Google home imie ! veuillez choisir votre jeu parmis la séléction suivante ! Le premier jeu est ' + startChoices[0]
+    conv.ask('Bonjour ! Bienvenue sur Google home imie ! veuillez choisir votre jeu parmis les choix suivants ! Le premier jeu est ' + startChoices[0]
     .jeu + ' et le suivant est le ' + startChoices[1].jeu);
-    conv.ask('voulez vous au ' + startChoices[0]
+    conv.ask('voulez vous au jouer ' + startChoices[0]
     .jeu + ' ou au' + startChoices[1].jeu) 
     }
 
@@ -43,7 +43,7 @@ app.intent('actions.intent.PERMISSION', (conv, input, granted) => {
 app.intent('actions.intent.MAIN', (conv, input) => {
     
     const options = {
-        context: 'To address you by name and know your location',
+        context: 'Cette application à besoin d\'accéder à vos informations !',
         permissions: ['NAME'],
     };
     
@@ -82,12 +82,14 @@ function handleTextIntent(conv, input){
             conv.data.introGame = true
         } else if (input === 'non'){
             return conv.close('Aurevoir ' + conv.data.firstName);
+        } else{
+            conv.close('Désolé je n\'ai pas compris');  
         }
     }
 
     if(conv.data.idGame === 1 && conv.data.endGame === false){
         if(conv.data.introGame === true){
-            conv.ask('Le jeu commence ! Veuillez choisir un nombre !')
+            conv.ask('J\'ai choisis un nombre ! A vous de le devinez !')
             conv.data.introGame = false
         } else if (conv.data.introGame === false){
             startGameMoreOrLess(conv, input)
