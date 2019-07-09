@@ -19,7 +19,7 @@
   "conversations": {
     "imie--home": {
       "name": "imie--home",
-      "url": "https://26e02b1d.ngrok.io",
+      "url": "https://6f53fbde.ngrok.io",
       "fulfillmentApiVersion": 2,
       "inDialogIntents": [
         {
